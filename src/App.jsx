@@ -1,18 +1,16 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import SignUp from "./pages/SignUp.jsx";
-import Login from "./pages/Login.jsx";
+import RegisterAndLogin from "./pages/RegisterAndLogin.jsx";
+import HomeScreen from "./pages/HomeScreen.jsx";
+import ForgotPassword from "./pages/ForgotPassword.jsx";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="about" element={<SignUp />} />
-          <Route path="contact" element={<Login />} />
-          {/* <Route path="*" element={<Error />} /> */}
-        </Route>
+        <Route path="/" element={<RegisterAndLogin />} />
+        <Route path="/home" element={<HomeScreen />} />
+        <Route path="/reset" element={<ForgotPassword />} />
       </Routes>
     </BrowserRouter>
   );
