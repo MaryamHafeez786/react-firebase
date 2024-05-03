@@ -6,6 +6,7 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "../style/commonstyle.css";
+import { Button } from "flowbite-react";
 function RegisterAndLogin() {
   const [login, setLogin] = useState(false);
 
@@ -67,6 +68,7 @@ function RegisterAndLogin() {
         <br />
         <button>{login ? "SignIn" : "SignUp"}</button>
       </form>
+      <Button color="dark">Dark</Button>
     </div>
   );
 }
